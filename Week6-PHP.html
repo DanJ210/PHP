@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h2>Interactive PHP form</h2>
+        <!-- Post method not the get method. Post sends to form securely. -->
+        <form action="Week6-PHP.php" method="post">
+            <p>Name: <input type="text" name="clientname"/></br></p>
+            <p>Age: <input type="text" name="clientage"/></br></p>
+            <p>Email: <input type="text" name="email"/></br></p>
+            
+            <p>Pace of the class?
+                <input type="radio" name="pace" value="Yes" checked="checked"/>yes
+                <input type="radio" name="pace" value="no"/>no
+                <input type="radio" name="pace" value="not sure"/>Not Sure
+            </p>
+            <p>Suggestions to improve learning: </p></br>
+                <textarea name="suggestions" rows="12" cols="50"></textarea></p>
+            <p><input type="submit" value="send"/></p>
+        </form>
+    </body>
+</html>

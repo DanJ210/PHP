@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Daniel Jackson - Assignment 6 Part 1</title>
+        <script
+        src="http://code.jquery.com/jquery-3.1.1.js"
+        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+        crossorigin="anonymous">
+        </script>
+        <style>
+            div#output{background-color:red; color:white;
+            width:60px;}
+            div#output2{background-color:blue; color:orange;
+            width:60px;}
+            body .game{color:orange;}
+            body #guesses{background-color:green;
+             color:white; width:60px; float:right;}
+        </style>
+    </head>
+    <body>
+        <h1 class="game">Student signup form.</h1>
+        <p class="game">Try your luck before you fill out the form!</p>
+        <!-- Small JavaScript game for fun to play
+        before filling out the form and moving on.
+        This is only me learning and getting stuff
+        to work. -->
+        <script>
+            var guessesRight = 0;
+            function guessNumber () {
+                //alert("testing");
+                document.getElementById("output").innerHTML = "";
+                document.getElementById("output2").innerHTML = "";
+                document.getElementById("output3").innerHTML = "";
+                var inp=parseInt(document.getElementById("number").value);
+                var myArray = new Array(10);
+                //document.getElementById("output3").innerHTML = guessesRight +=1;
+                for (var i =0; i <10; i++) {
+                    myArray[i] = i+1;
+                }
+                var computerGuess = Math.floor((Math.random() * 5) + 1);
+                //document.getElementById("output3").innerHTML = computerGuess;
+                var mathPI = Math.PI;
+                //document.getElementById("output3").innerHTML = mathPI;
+                if (inp === computerGuess) {
+                    //alert("Yea1");
+                    //guessesRight+=1;
+                    document.getElementById("output").innerHTML = "Good Guess!";
+                    //alert("yea");
+                    document.getElementById("guesses").innerHTML =guessesRight+=1;
+                    
+                }
+                else {
+                    document.getElementById("output2").innerHTML = "Wrong! Try Again";
+                }
+                //document.getElementById("guesses").innerHTML = guessesRight;
+                //document.getElementById("output2").innerHTML = myArray[5];
+                //document.getElementById("output").innerHTML = inp;
+                //alert("array made");
+            }
+            
+        </script>
+        Input a number between 1 and 5 to be guessed:
+<input type="textbox" id="number" />
+<br/>
+<input type="button" value="Guess My Number" onClick="guessNumber();" />
+<br/>
+<div id="output">
+
+</div>
+<div id="output2">
+
+</div>
+<div id="output3">
+
+</div>
+<div id="guesses"><p>Guesses right</p>
+</div>
+<hr>
+</br>
+<h2>First Student</h2>
+
+<!-- Where the form truly starts -->
+        <form action="Assignment 6-1.php" method="post">
+            <p>Eneter Students Name: 
+                <input type="text" name="FName"/></br>
+            </p>
+            <p>Enter Students Status:
+                <input type="text" name="status"/></br>
+            </p>
+            <p>Enter Students GPA:
+                <input type="text" name="gpa"/></br>
+            </p>
+            <p>Enter Studends Degree:
+                <input type="text" name="degree"/></br>
+            </p>
+            <!--<p><input type="submit" value="send"/></p>
+            <button type="button" onclick="getElementById">
+            </button>-->
+        
+        <h2>Second Student</h2>
+        
+            <p>Eneter Students Name: 
+                <input type="text" name="FName2"/></br>
+            </p>
+            <p>Enter Students Status:
+                <input type="text" name="status2"/></br>
+            </p>
+            <p>Enter Students GPA:
+                <input type="text" name="gpa2"/></br>
+            </p>
+            <p>Enter Studends Degree:
+                <input type="text" name="degree2"/></br>
+            </p>
+            <p><input type="submit" value="send"/></p>
+            <!--<button type="button" onclick="getElementById">
+            </button>-->
+        </form>
+    </body>
+</html>

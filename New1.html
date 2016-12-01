@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head><title></title></head>
+    <body>
+        <form action="Newest.php" method="post">
+    <p>First Name: <input type="text" name="FName"/></p></br>
+    <p>Last Name: <input type="text" name="LName"/></p></br>
+    <p>Gender: </br>
+    Male: <input type="radio" name="gender" value="male"/></br>
+    Female: <input type="radio" name="gender" value="female"/></br>
+    </p>
+
+    <p>Sports Played:
+        Soccer: <input type="checkbox" value="Soccer" name="sports[]"/></br>
+        Tennis: <input type="checkbox" value="Tennis" name="sports[]"/></br>
+        Basketball: <input type="checkbox" value="Basketball" name="sports[]"/></br>
+        BaseBall <input type="checkbox" value="Baseball" name="sports[]"/></br>
+    </p>
+
+<p>Priod education: 
+    <select name="education">
+        <option value="High School">High SChool</option>
+        <option value="College">College cert</option>
+        <option value="Associates">Associates</option>
+        <option value="Bachelors">Bachelors</option>
+    </select>
+    </p>
+
+    <p><input type="submit" value="send"/></p>
+    </form>
+</body>
+</html>
