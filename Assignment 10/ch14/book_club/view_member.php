@@ -60,6 +60,7 @@ function displayForm( $errorMessages, $missingFields, $member ) {
         <input type="radio" name="gender" id="genderFemale" value="f"<?php setChecked( $member, "gender", "f" )?> />
         <label for="favoriteGenre">Favorite genre</label>
         <select name="favoriteGenre" id="favoriteGenre" size="1">
+        
         <?php foreach ( $member->getGenres() as $value => $label ) { ?>
           <option value="<?php echo $value ?>"<?php setSelected( $member, "favoriteGenre", $value ) ?>><?php echo $label ?></option>
         <?php } ?>
@@ -71,6 +72,8 @@ function displayForm( $errorMessages, $missingFields, $member ) {
           <input type="submit" name="action" id="deleteButton" value="Delete Member" style="margin-right: 20px;" />
         </div>
       </div>
+      <label for="phoneNumber"<?php validateField( "phoneNumber", $missingFields ) ?>>Phone Number *</label>
+        <input type="text" name="phoneNumber" id="phoneNumber" value="<?php echo $member->getValueEncoded( "phoneNumber" ) ?>" />
     </form>
 
     <h2>Access log</h2>
