@@ -12,7 +12,7 @@
     and use this as a reference in the future, sort of like notes. 
     */ // I ended up taking the above statement out as it threw
        // an error, so I had to remove.
-    $dsn = "mysql:dbname=mydatabase";
+    $dsn = "mysql:dbname=florida_recycling";
     $username = "root";
     $password = "420jedis";
     
@@ -26,14 +26,14 @@
         echo "Connection Failed: ".$connectionError->getMessage();
     }
     //Reading data after connection made successfully.
-    $sql = "select * from fruit";
+    $sql = "select * from customer_info";
 
     echo "<ul>";
     try {
         $rows = $conn->query($sql);
         foreach($rows as $row){
-            echo "<li>A ".$row["name"]. " is ";
-            echo $row["color"]."</li>";
+            echo "<li>A ".$row["customerID"]. " is ";
+            echo $row["firstName"]."</li>";
         }
     } catch (PDOException $readingError) {
         echo "Query Failed With: ".$readingError->getMessage();

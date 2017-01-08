@@ -69,7 +69,6 @@ class Member extends DataObject {
 
   public static function getByUsername( $username ) {
     $conn = parent::connect();
-    $connection = new DataObject();
     $sql = "SELECT * FROM " . TBL_MEMBERS . " WHERE username = :username";
 
     try {
